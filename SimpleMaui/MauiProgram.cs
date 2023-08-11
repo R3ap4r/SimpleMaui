@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using SimpleMaui.Services;
 using SimpleMaui.ViewModels;
 using SimpleMaui.Views;
 
@@ -15,6 +16,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf","OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf","OpenSansSemibold");
 			});
+
+		builder.Services.AddSingleton<INavigationService,NavigationService>();
+
 		builder.Services.AddTransient<MainViewModel>();
 		builder.Services.AddTransient<MainView>();
 
