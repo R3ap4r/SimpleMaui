@@ -19,9 +19,11 @@ public static class ServiceExtensions
 	{
 		/// ViewModels
 		services.AddTransient<MainViewModel>();
+		services.AddTransient<LogInViewModel>();
 
 		/// Views
 		services.AddTransient<MainView>();
+		services.AddTransient<LogInView>();
 
 		return services;
 	}
